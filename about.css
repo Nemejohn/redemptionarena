@@ -1,0 +1,1278 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+    padding:0 4%;
+}
+
+/*----- Nav Bar-----*/
+
+.main_navbar{
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(5px);
+    background: #282b36;
+    opacity: 0.98;
+    z-index: 999;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.nav-bar .group-one{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.group-one .image{
+    border: 2px solid #fff;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+}
+
+.group-one .image img{
+    width: 140px;
+}
+
+.group-one .second-image{
+    line-height: 21px;
+    margin-left: 20px;
+}
+
+.group-one .second-image h3{
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.group-one .second-image p{
+    font-size: 17px;
+    font-weight: 500;
+    color: rgb(236, 153, 0);
+}
+
+.group-one .second-image h4{
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.group-one .second-image span em{
+    font-family: 'Trebuchet MS';
+    color: orange;
+}
+
+.second-image .location i{
+    color: orange;
+}
+
+.second-image .location{
+    font-size: 15px;
+    color: white;
+}
+
+.nav-bar .flex,
+.nav-bar .flex .cover{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-bar ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-bar ul a{
+    text-decoration: none;
+}
+
+.nav-bar ul a li{
+    margin: 0 20px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    transition: all ease 0.5s;
+}
+
+.nav-bar ul a li.active,
+.nav-bar ul a li:hover{
+    color: #f3a93d;
+}
+
+.nav-bar ul a li.active::after,
+.nav-bar ul a li:hover::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    height: 3px;
+    width: 50%;
+    border-radius: 50px;
+    transition: all ease 0.5s;
+    background-color: #f3a93d;
+}
+
+.nav-bar a{
+    text-decoration: none;
+}
+
+.nav-bar .new{
+    padding: 15px 30px;
+    align-items: center;
+    border-radius: 50px;
+    margin-left: 20px;
+    font-size: 17px;
+    font-weight: 500;
+    background: orange;
+    border: 2px solid orange;
+    color: #fff;
+    transition: ease all 0.5s;
+}
+
+.nav-bar .new:hover{
+    background-color: transparent;
+    border: 2px solid orange;
+    color: white;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+}
+
+.nav-bar h6{
+    display: none !important;
+    font-size: 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.nav-bar h6 i{
+    vertical-align: middle;
+    font-size: 27px;
+}
+
+.close{
+    font-size: 30px;
+    color: #fff;
+    display: none;
+    cursor: pointer;
+}
+
+@media(max-width:1450px){
+    .close{
+        display: block;
+    }
+    .nav-bar h6{
+        display: block !important;
+    }
+    .group-one .image img{
+        width: 100px;
+    }
+    .group-one .second-image{
+        line-height: 20px;
+    }
+    .group-one .second-image p{
+        font-size: 15px;
+        font-weight: 500;
+        color: rgb(236, 153, 0);
+    }
+    .group-one .second-image h4{
+        font-size: 15px;
+    }
+    .group-one .second-image span em{
+        font-size: 15px;
+    }
+    .second-image .location{
+        font-size: 14px;
+    }
+    .nav-bar .flex{
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        padding: 20px 5%;
+        /*max-height: 0px;*/
+        overflow: hidden;
+        visibility: hidden;
+        border-top: 2px solid grey;
+        border-bottom: 3px solid grey;
+        background-color: #2f3240;
+        transition: all ease 0.5s;
+    }
+    .nav-bar .flex .cover{
+        display: block;
+    }
+    .nav-bar .flex.open{
+        visibility: visible;
+    }
+    .nav-bar .flex ul{
+        display: block;
+        margin: 0;
+    }
+    .nav-bar .flex ul li{
+        margin: 22px 0;
+    }
+    .nav-bar .new{
+        width: 200px;
+        padding: 15px 30px;
+        align-items: center;
+        border-radius: 50px;
+        margin-left: 0px;
+        font-size: 17px;
+        text-align: center;
+        font-weight: 500;
+        background: orange;
+        color: #fff;
+        transition: ease all 0.5s;
+    }
+    .nav-bar ul a li.active,
+    .nav-bar ul a li:hover::after{
+        width: 25%;
+    }
+}
+
+@media(max-width:1030px){
+    .group-one .image img{
+        width: 80px;
+    }
+    .group-one .second-image{
+        margin-left: 10px;
+        line-height: 18px;
+    }
+    .group-one .second-image h3{
+        font-size: 15px;
+        letter-spacing: 0px;
+    }
+    .group-one .second-image p{
+        font-size: 14px;
+    }
+    .group-one .second-image h4{
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+    .group-one .second-image span em{
+        font-size: 13px;
+    }
+    .second-image .location{
+        font-size: 13px;
+    }
+    .nav-bar h6{
+        font-size: 17px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-bar h6 i{
+        vertical-align: middle;
+        font-size: 20px;
+    }
+    .nav-bar .flex{
+        position: absolute;
+        top: -160px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        padding: 20px 5%;
+        /*max-height: 0px;*/
+        overflow: hidden;
+        visibility: hidden;
+        border-top: 2px solid grey;
+        background-color: #2f3240;
+        transition: all ease 0.5s;
+    }
+      
+}
+
+@media(max-width:770px){
+    .group-one .image img{
+        width: 60px;
+    }
+    .group-one .image{
+        border: 1.5px solid #fff;
+        border-top: none;
+        border-bottom: none;
+        border-left: none;
+    }
+    .group-one .second-image{
+        margin-left: 10px;
+        line-height: 16px;
+    }
+    .group-one .second-image h3{
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .group-one .second-image p{
+        font-size: 13px;
+    }
+    .group-one .second-image h4{
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0px;
+    }
+    .group-one .second-image span em{
+        font-size: 13px;
+    }
+    .second-image .location{
+        font-size: 13px;
+    }
+    .nav-bar h6{
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-bar h6 i{
+        vertical-align: middle;
+        font-size: 17px;
+    }
+    .nav-bar .flex{
+        position: absolute;
+        top: -160px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        padding: 20px 5%;
+        /*max-height: 0px;*/
+        overflow: hidden;
+        visibility: hidden;
+        border-top: 2px solid grey;
+        background-color: #2f3240;
+        transition: all ease 0.5s;
+    }
+    .nav-bar ul a li{
+        margin: 0 10px;
+        font-size: 17px;
+        color: #fff;
+        cursor: pointer;
+        position: relative;
+        transition: all ease 0.5s;
+    }
+    .nav-bar .new{
+        padding: 7px 20px;
+        width: 100%;
+        font-size: 13px;
+    }
+    .close{
+        font-size: 22px;
+    }
+      
+}
+
+@media(max-width:430px){
+    .group-one .image img{
+        width: 60px;
+    }
+    .group-one .image{
+        border: 1.5px solid #fff;
+        border-top: none;
+        border-bottom: none;
+        border-left: none;
+    }
+    .group-one .second-image{
+        margin-left: 7px;
+        line-height: 16px;
+    }
+    .group-one .second-image h3{
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .group-one .second-image p{
+        font-size: 13px;
+    }
+    .group-one .second-image h4{
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0px;
+    }
+    .group-one .second-image span em{
+        font-size: 13px;
+    }
+    .second-image .location{
+        font-size: 13px;
+    }
+    .nav-bar h6{
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-bar h6 i{
+        vertical-align: middle;
+        font-size: 20px;
+    }
+    .nav-bar ul a li{
+        margin: 0 9px;
+        font-size: 17px;
+        color: #fff;
+        cursor: pointer;
+        position: relative;
+        transition: all ease 0.5s;
+    }
+    .nav-bar .new{
+        padding: 10px 20px;
+        width: 100%;
+        font-size: 17px;
+    }
+    .close{
+        font-size: 20px;
+    }
+      
+}
+
+.heartbeat {
+	-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+	        animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2024-8-12 2:32:5
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation heartbeat
+ * ----------------------------------------
+ */
+ @-webkit-keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  @keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+
+
+
+/* ------ ABOUT US ----- */
+
+.about .container{
+    width: 100%;
+    height: 45vh;
+    background: linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55),rgba(0,0,0,0.55),rgba(0,0,0,0.55)), url(images/altar.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.about .container h1{
+    font-size: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+@media(max-width: 777px){
+    .about .container h1{
+        font-size: 40px;
+    }
+}
+
+@media(max-width: 555px){
+    .about .container h1{
+        font-size: 32px;
+    }
+}
+
+
+
+/*----------- History ----------- */
+
+.history{
+    margin-top: 3%;
+}
+
+.history .container h1{
+    font-size: 35px;
+    color: #2f3240;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.history .container h3{
+    font-size: 24px;
+    color: #2f3240;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.history .container p,
+.history .container li,
+.history .container p i{
+    font-size: 16px;
+    color: #515464;
+    margin-bottom: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.history .container .anthem{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.history .container .anthem .anthem-one{
+    margin: 0 30px;
+}
+
+@media(max-width: 555px){
+    .history .container h1{
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+    .history .container .anthem{
+        align-items: self-start;
+        justify-content: flex-start;
+    }
+    .history .container .anthem .anthem-one{
+        margin-left: 10px;
+    }
+}
+
+
+/*----------- weekly_activities -------- */
+
+.weekly_activities{
+    width: 100%;
+    padding: 45px 0;
+    margin-top: 3%;
+    background: linear-gradient(rgba(191, 164, 43, 0.25),rgba(191, 164, 43, 0.35),rgba(0,0,0,0.45),rgba(0,0,0,0.65)), url(images/holding-bible.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.weekly_activities .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.weekly_activities .container h1{
+    font-size: 30px;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.weekly_activities .container h3{
+    color: #fff;
+    font-size: 20px;
+    /* margin: 8px 0px 10px 0px */
+    margin-top: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.weekly_activities .container p{
+    color: #E7DF84;
+    font-size: 17px;
+    margin: 2px 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/* ------ PLAN VISIT ------ */
+
+.plan_visit{
+    width: 100%;
+    margin-top: 3%;
+}
+
+.plan_visit .container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.container .imageone{
+    width: 45%;
+}
+
+.container .imageone img{
+    width: 100%;
+}
+
+.plan_visit .container h2{
+    color: #000;
+    margin-bottom: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container form{
+    width: 100%;
+}
+
+form .input-display{
+    display: block;
+}
+
+form .input-display .input{
+    display: flex;
+    margin-top: 10px;
+}
+
+form .input-display label{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form .input-display label span{
+    color: red;
+}
+
+label[for="email"],select,
+label[for="textarea"],select,
+label[for="message"],select{
+    display: block;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+label[for="email"] span,select,
+label[for="textarea"] span,select,
+label[for="message"] span,select{
+    color: red;
+}
+
+form .input-display .input input{
+    width: 49.7%;
+    margin: 0 5px;
+}
+
+form input,
+form textarea{
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #282b36;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    outline: none;
+}
+
+form input::placeholder,
+form textarea::placeholder{
+    font-size: 18px;
+    color: grey;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+form .submit{
+    background: #282b36;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    outline: none;
+    border: 1px solid #282b36;
+    transition: all ease 0.5s;
+}
+
+form .submit:hover{
+    cursor: pointer;
+    color: #000;
+    background: transparent;
+    border: 1px solid #282b36;
+}
+
+@media(max-width: 1024px){
+    .plan_visit .container{
+        display: flex;
+        justify-content: space-around;
+    }
+    .container .imageone img{
+        width: 95%;
+    }
+    .plan_visit .container .plan{
+        margin-top: 15px;
+    }
+    .plan_visit .container h2{
+        color: #000;
+        font-size: 18px;
+        margin-bottom: 10px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    form .input-display .input{
+        display: flex;
+        margin-top: 10px;
+    }
+    form .input-display label{
+        font-size: 14px;
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    label[for="email"],select,
+    label[for="textarea"],select,
+    label[for="message"],select{
+        display: block;
+        margin-top: 10px;
+        font-size: 14px;
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    form .input-display .input input{
+        width: 49.7%;
+        margin: 0 5px;
+    }
+    form input,
+    form textarea{
+        width: 100%;
+        margin-top: 10px;
+        padding: 9px;
+        border: 1px solid #282b36;
+        border-radius: 5px;
+        font-size: 16px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        outline: none;
+    }
+    form input::placeholder,
+    form textarea::placeholder{
+        font-size: 16px;
+        color: grey;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    form .submit{
+        background: #282b36;
+        font-size: 15px;
+        font-weight: 500;
+        color: #fff;
+        padding: 9px 15px;
+        border-radius: 5px;
+        margin-top: 10px;
+        transition: all ease 0.5s;
+    }
+}
+
+@media(max-width: 430px){
+    .plan_visit .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .container .imageone{
+        width: 100%;
+    }
+    .container .imageone img{
+        width: 100%;
+    }
+    .plan_visit .container .plan{
+        margin-top: 15px;
+        margin-left: 0px;
+    }
+    .plan_visit .container h2{
+        color: #000;
+        font-size: 17px;
+        margin-bottom: 10px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    form .input-display .input{
+        display: flex;
+        margin-top: 10px;
+    }
+    form .input-display label{
+        font-size: 14px;
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    label[for="email"],select,
+    label[for="textarea"],select,
+    label[for="message"],select{
+        display: block;
+        margin-top: 10px;
+        font-size: 14px;
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    form .input-display .input input{
+        width: 49.7%;
+        margin: 0 2px;
+    }
+    form input,
+    form textarea{
+        width: 100%;
+        margin-top: 10px;
+        padding: 8px;
+        border: 1px solid #282b36;
+        border-radius: 5px;
+        font-size: 15px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        outline: none;
+    }
+    form input::placeholder,
+    form textarea::placeholder{
+        font-size: 14px;
+        color: grey;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    form .submit{
+        background: #282b36;
+        font-size: 15px;
+        font-weight: 500;
+        color: #fff;
+        padding: 9px 15px;
+        border-radius: 5px;
+        margin-top: 10px;
+        transition: all ease 0.5s;
+    }
+}
+
+
+/* ----- Vicar Bio ------ */
+
+.vicar_bio{
+    width: 100%;
+    margin-top: 3%;
+    padding: 30px 0;
+}
+
+.vicar_bio .container .horizontal{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.horizontal .vicar img{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+}
+
+.horizontal .line{
+    border: 1px solid lightgrey;
+    width: 38%;
+    height: 0;
+}
+
+.container .vicar-cover{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.container .vicar-cover h3{
+    color: #000;
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container .vicar-cover p{
+    color: #222222;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 7px 0;
+}
+
+.vicar-cover .buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.vicar-cover .buttons .btn{
+    margin: 0 5px;
+    font-size: 15px;
+    font-weight: 500;
+    outline: none;
+    border: 1px solid #222222;
+    background: #282b36;
+    color: #fff;
+    border-radius: 50px;
+    padding: 10px 20px;
+    transition: all ease 0.5s;
+}
+
+.vicar-cover .buttons .btn:hover{
+    background: transparent;
+    cursor: pointer;
+    color: #000;
+}
+
+.vicar-cover .buttons .btn.btn2{
+    background: transparent;
+    color: #000;
+}
+
+.vicar-cover .buttons .btn.btn2:hover{
+    background: #282b36;
+    cursor: pointer;
+    color: #fff;
+}
+
+@media(max-width:777px){
+    .vicar_bio{
+        width: 100%;
+        margin-top: 2%;
+        padding: 30px 0;
+    }
+    .vicar_bio .container .horizontal{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .horizontal .vicar img{
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+    }
+    .horizontal .line{
+        border: 1px solid lightgrey;
+        width: 36%;
+        height: 0;
+    }
+    .container .vicar-cover h3{
+        color: #000;
+        font-weight: 600;
+        font-size: 17px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .container .vicar-cover p{
+        color: #222222;
+        font-size: 15px;
+        font-weight: 500;
+        margin: 7px 0;
+    }
+    .vicar-cover .buttons .btn{
+        margin: 0 5px;
+        font-size: 15px;
+        font-weight: 500;
+        outline: none;
+        border: 1px solid #222222;
+        background: #282b36;
+        color: #fff;
+        border-radius: 50px;
+        padding: 7px 13px;
+        transition: all ease 0.5s;
+    }
+}
+
+@media(max-width: 555px){
+    .vicar_bio{
+        width: 100%;
+        margin-top: 2%;
+        padding: 30px 0;
+    }
+    .vicar_bio .container .horizontal{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .horizontal .vicar img{
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+    }
+    .horizontal .line{
+        border: 1px solid lightgrey;
+        width: 33%;
+        height: 0;
+    }
+    .container .vicar-cover h3{
+        color: #000;
+        font-weight: 600;
+        font-size: 15px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .container .vicar-cover p{
+        color: #222222;
+        font-size: 14px;
+        font-weight: 500;
+        margin: 7px 0;
+    }
+    .vicar-cover .buttons .btn{
+        margin: 0 5px;
+        font-size: 15px;
+        font-weight: 500;
+        outline: none;
+        border: 1px solid #222222;
+        background: #282b36;
+        color: #fff;
+        border-radius: 50px;
+        padding: 7px 10px;
+        transition: all ease 0.5s;
+    }
+}
+
+
+
+/* ------- Membership ------ */
+
+.membership{
+    width: 100%;
+    height: 50vh;
+    background: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35),rgba(0,0,0,0.35),rgba(0,0,0,0.35)), url(images/raising_hands.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2%;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+.membership .btn{
+    font-size: 25px;
+    font-weight: bold;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    border: 2px solid orange;
+    border-radius: 5px;
+    backdrop-filter: blur(8px);
+    padding: 15px 30px;
+    color: #fff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+/*------ Footer------*/
+
+footer{
+    background: #282b36;
+}
+
+footer .container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: auto;
+    padding-block: 60px;
+}
+
+.footer-col{
+    width: 25%;
+}
+
+.footer-col ul{
+    list-style: none;
+}
+
+.footer-col ul i{
+    color: orange;
+}
+
+.footer-col h4{
+    position: relative;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 22px;
+    color: orange;
+    text-transform: capitalize;
+}
+
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    width: 40px;
+    background: grey;
+    height: 2px;
+    left: 0;
+    bottom: -6px;
+    border-radius: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 8px;
+}
+
+.footer-col ul li a,
+.footer-col ul li{
+    display: block;
+    text-decoration: none;
+    font-size: 19px;
+    color: #bdb6b6;
+    transition: all ease 0.3s;
+}
+
+.footer-col ul li a:hover{
+    color: #fff;
+    padding-left: 2px;
+}
+
+.footer-col .links a{
+    display: inline-block;
+    height: 44px;
+    width: 44px;
+    color: #fff;
+    margin: 0 8px 8px 0;
+    text-align: center;
+    line-height: 44px;
+    border-radius: 50%;
+    transition: 0.4s;
+    background-color: rgba(40, 130, 214, 0.8);
+}
+
+
+.footer-col .links a:hover{
+    transform: translateY(-4px);
+    background: #fff;
+    color: #bdb6b6;
+}
+
+.copy-right{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #282b36;
+    font-weight: 300;
+    color: #bdb6b6;
+    border-top: 1px solid #515464;
+}
+
+.copy-right .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.copy-right .container p a{
+  color: #bdb6b6;
+  text-decoration: none;
+}
+
+.copy-right .hold i{
+    margin: 15px 0;
+    font-size: 22px;
+    color: orange;
+}
+
+.arrow{
+    height: 44px;
+    width: 44px;
+    background: rgba(40, 130, 214, 0.8);
+    text-align: center;
+    line-height: 44px;
+    border-radius: 50%;
+}
+
+a .arrow i{
+    font-size: 20px;
+    color: #fff;
+}
+
+@media(max-width: 740px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .footer-col h4::before{
+        all: unset;
+    }
+}
+
+@media(max-width: 555px){
+    .footer-col{
+        width: 100%;
+    }
+
+    .copy-right .container{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+    }
+}

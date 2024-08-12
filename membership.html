@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Anglican Church Of Redemption</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="membership.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+        <link rel="shortcut icon" href="images/anglicanlogo2.png" type="image/x-icon">
+    </head>
+    <body id="body">
+        <nav class="main_navbar">
+            <div class="container">
+                <div class="nav-bar">
+                    <div class="group-one">
+                        <div class="image"><a href="index.html"><img src="images/anglicanlogo2.png"></a></div>
+                        <div class="second-image">
+                            <h3>DIOCESE OF LAGOS WEST</h3>
+                            <P>(Anglican Communion)</P>
+                            <h4>Anglican Church Of Redemption WhiteSand</h4>
+                            <h4>(Redemption Arena)</h4>
+                            <span><em>Tell the Story, Keep the Faith.</em></span>
+                            <div class="location"><i class='bx bxs-map'></i> (Fagbile Phase 3) 7, Risikatu Opebiyi Street, Ijegun, Lagos State.</div>
+                        </div>   
+                    </div>
+                    <div class="flex">
+                        <div class="cover">
+                            <ul>
+                                <a href="index.html"><li>Home</li></a>
+                                <a href="about.html"><li>About Us</li></a>
+                                <a href="giving.html"><li>Giving</li></a>
+                                <a href="let's-pray.html"><li>Let's Pray</li></a>
+                                <a href="leaders.html"><li>Our Learders</li></a>
+                                <a href="events.html"><li>Church Events</li></a>
+                                <a href="ministry.html"><li>Ministry</li></a>
+                                <a href="contact_us.html"><li>Contact Us</li></a>
+                            </ul>
+                            <a href="i'm-newpage.html"><div class="new heartbeat">I'm New Here</div></a>
+                        </div>
+                        <div class="close" onclick="closing()"><i class='bx bx-x'></i> </div>
+                    </div>
+                    <h6 class="menu" onclick="mainmenu()"><i class='bx bx-menu'></i></h6>
+                </div>
+            </div>
+        </nav>
+
+        <div class="member">
+            <div class="container">
+                <h1>#Be a Member</h1>
+                <p>We would love to see you.</p>
+            </div>
+        </div>
+
+        <div class="membership_information">
+            <div class="container">
+                <h1>Membership Form</h1>
+                <h2>Get started on becoming a member by filling the form.</h2>
+                <p><span>Note:</span> Please if the questions below does not suit who you're kindly fill the space with <span>'none'</span></p>
+                <form action="">
+                    <h3>Personal Details</h3>
+                    <label for="country">Country <span>*</span></label>
+                    <input type="text" name="country" placeholder="Country" required>
+                    <div class="input-display">
+                        <label for="firstname">Full Name <span>*</span></label>
+                        <div class="input">
+                            <input type="text" name="firstname" placeholder="First Name" required>
+                            <input type="text" name="lastname" placeholder="Last Name" required>
+                        </div>
+                    </div>
+                    <label for="date">Date of Birth <span>*</span></label>
+                    <input type="date" name="date" required>
+                    <label for="address">Address <span>*</span></label>
+                    <textarea name="address" cols="30" rows="6" placeholder="Address..." required></textarea>
+                    <label for="number">Phone Number <span>*</span></label>      
+                    <input type="number" name="number" placeholder="Contact Number" required>  
+                    <label for="email">Email <span>*</span></label>                  
+                    <input type="email" name="email" placeholder="Email" required>
+                    <label for="Marital">Marital Status <span>*</span></label>                      
+                    <input type="text" name="Marital" placeholder="Marital Status" required>
+
+                    <div class="cover">
+                        <h3>Previous Church Details</h3>
+                        <label for="name">Previous Church Full Name <span>*</span></label>
+                        <input type="text" name="name" placeholder="Previous church name" required>
+                        <label for="address">Address <span>*</span></label>
+                        <textarea name="address" cols="30" rows="6" placeholder="Address..." required></textarea>
+                        <label for="member">Where you a member <span>*</span></label>                  
+                        <input type="text" name="member" placeholder="Where you a member" required>
+                        <label for="number">Post Code <span>*</span></label>      
+                        <input type="number" name="code" placeholder="Optional"> 
+                    </div> 
+
+                    <div class="cover">
+                        <h3>Baptism Details</h3>
+                        <label for="baptized">Have you been water Baptized <span>*</span></label>
+                        <input type="text" name="baptized" placeholder="Baptized" required>
+                        <label for="where">Where, where you Baptized <span>*</span></label>
+                        <textarea name="address" cols="30" rows="6" placeholder="Address..." required></textarea>
+                    </div> 
+
+                    <div class="cover">
+                        <h3>Confirmation Details</h3>
+                        <label for="confirmed">Have you been Confirmed <span>*</span></label>
+                        <input type="text" name="confirmed" placeholder="Confirmed" required>
+                        <label for="where">Where, where you Confirmed <span>*</span></label>
+                        <textarea name="address" cols="30" rows="6" placeholder="Address..." required></textarea>
+                    </div> 
+
+                    <div class="cover">
+                        <h3>Children Details</h3>
+                        <p class="question">Do you have a child Under (5 - 15) years</p>
+                        <div class="input-display">
+                            <label for="firstname">Full Name <span>*</span></label>
+                            <div class="input">
+                                <input type="text" name="firstname" placeholder="First Name" required>
+                                <input type="text" name="lastname" placeholder="Last Name" required>
+                            </div>
+                        </div>
+                        <label for="date">Date of Birth <span>*</span></label>
+                        <input type="date" name="date" >
+                        <label for="confirmed">Confirmed or Not <span>*</span></label>                  
+                        <input type="text" name="confirmed" placeholder="Has your child been confirmed" required>
+                    </div> 
+
+                    <div class="cover">
+                        <h3>Children Details</h3>
+                        <p class="question">Do you have a child Above (15 - 20) years</p>
+                        <div class="input-display">
+                            <label for="firstname">Full Name <span>*</span></label>
+                            <div class="input">
+                                <input type="text" name="firstname" placeholder="First Name" required>
+                                <input type="text" name="lastname" placeholder="Last Name" required>
+                            </div>
+                        </div>
+                        <label for="date">Date of Birth <span>*</span></label>
+                        <input type="date" name="date" >
+                        <label for="confirmed">Confirmed or Not <span>*</span></label>                  
+                        <input type="text" name="confirmed" placeholder="Has your child been confirmed" required>
+                    </div> 
+
+                    <button class="btn">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="writing">
+            <div class="container">
+                <h3>
+                    I CONFIRM THAT TO THE BEST OF MY KNOWLEDGE THE ABOVE INFORMATION IS TRUE.
+                    I UNDERSTAND THAT COMPLETION OF THIS FORM WITHOUT ATTENDING A MEMBERSHIP CLASS
+                    AND RECEIVING WRITTEN CONFIRMATION DOES NOT CONSTITUTE FORMAL MEMBERSHIP. INCASE
+                    YOU HAVE A PROBLEM FILLING THIS INFORMATION OR DON'T UNDERSTAND HOW TO FILL, PLEASE
+                    KINDLY CONTACT THE <a href="https://wa.me/+2347035177760/?text= Hello Sir I am a user from Anglican Church
+                    of Redemption WhiteSand website and would need some clearification on how to fill the membership form." target="_blank">
+                    <span>VICAR</span></a> FOR BETTER CLEARIFICATION THANKS.
+                </h3>
+            </div>
+        </div>
+
+        <div class="church_due">
+            <div class="container">
+                <h4>UPDATE YOUR MEMBERSHIP IN THE CHURCH NOW</h4>
+                <P>In other to complete the form please pay your church Due:</P>
+                <div class="contain">
+                    <div class="lay-out">
+                        <p>Men:</p>
+                        <span>₦1,500</span>
+                    </div>
+                    <div class="lay-out">
+                        <p>women:</p>
+                        <span>₦1,000</span>
+                    </div>
+                    <div class="lay-out">
+                        <p>Youth:</p>
+                        <span>₦500</span>
+                    </div>
+                    <div class="lay-out">
+                        <p>Children:</p>
+                        <span>₦200</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container">
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="giving.html">Giving</a></li>
+                        <li><a href="let's-pray.html">Let's Pray</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>More Info</h4>
+                    <ul>
+                        <li><a href="leaders.html">Leaders</a></li>
+                        <li><a href="events.html">Church Event</a></li>
+                        <li><a href="ministry.html">Ministry</a></li>
+                        <li><a href="donation.html">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="contact_us.html">Contact us</a></li>
+                        <li><a href="#"><i class="fa fa-envelope"></i> Churchofredemption whitesand@gmail.com</a></li>
+                        <li><a href="tel:234-703-517-7760"><i class="fa fa-phone"></i> +234-703-517-7760</a></li>
+                        <li><i class="bx bx-map"></i> (Fagbile Phase 3) 7, Risikatu Opebiyi Street, Ijegun, Lagos State.</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="links">
+                        <a href="https://www.facebook.com/profile.php?id=61559888981935"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://chat.whatsapp.com/JRXuI6gBTMd8hxAoLeaYLS"><i class="fab fa-whatsapp"></i></a>
+                    </div>  
+                </div>
+            </div>
+        </footer>
+
+        <div class="copy-right">
+            <div class="container">    
+                <div class="hold">
+                    <i class="fa-solid fa-cross"></i>
+                    <p>(Fagbile Phase 3) 7, Risikatu Opebiyi Street, Ijegun, Lagos State.</p>
+                    <p> ©2024 Anglican Church Of Redemption Whitesand</p>
+                </div>
+                <a href="#body"><div class="arrow"><i class='bx bx-up-arrow-alt'></i></div></a>
+            </div>
+        </div>
+
+        <script>
+            const menu = document.querySelector(".menu");
+            const flex = document.querySelector(".flex");
+            const close = document.querySelector(".close");
+            
+            function mainmenu(){
+                flex.style.visibility = "visible";
+                flex.style.overflow = "visible";
+                flex.style.top = "0";
+            }
+            function closing(){ 
+                flex.style.top = "-500px";
+            }
+        </script>
+
+    </body>
+</html>
